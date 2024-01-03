@@ -11,6 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - uses: jakejarvis/s3-sync-action@master
+      - uses: chetan/invalidate-cloudfront-action@v2
         env:
           DISTRIBUTION: ${{ secrets.DISTRIBUTION }}
           PATHS: "/index.html"
